@@ -6,9 +6,8 @@
     <div class="links">
         <a href="{{ route('upload') }}">Upload</a>
         <a href="{{ route('getList') }}">Get Data</a>
-        <a href="https://laracasts.com">Laracasts</a>
-        <a href="https://laravel-news.com">News</a>
-        <a href="https://forge.laravel.com">Forge</a>
-        <a href="https://github.com/laravel/laravel">GitHub</a>
+        <a href="http://www.spacegroup.co.uk">Space Group</a>
+        <a href="http://www.spacegroup.co.uk/news">Space Group News</a>
+        <a href="https://github.com/rodelmarkamancio/Vuforia-Web-API">GitHub</a>
     </div>
 </div>
