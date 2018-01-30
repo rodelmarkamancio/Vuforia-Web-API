@@ -14,7 +14,7 @@
                             <th scope="col">Width</th>
                             <th scope="col">Active Flag</th>
                             <th scope="col">Tracking Rating</th>
-                            <th scope="col">Reco Rating</th>
+                            <th scope="col">API</th>
                             <th scope="col"></th>
                         </tr>
                     </thead>
@@ -27,7 +27,7 @@
                                 <td>{{ $item->width }}</a></td>
                                 <td>{{ $item->active_flag }}</a></td>
                                 <td>{{ $item->tracking_rating }}</a></td>
-                                <td>{{ $item->reco_rating }}</a></td>
+                                <td><a href="{{ route('apiimageTarget', $item->target_id) }}" target="_blank">API</a></a></td>
                                 <td><a href="{{ route('admingetDelete', $item->target_id) }}" title="delete" data-method="DELETE" class="delete-btn"><i class="fa fa-trash-o" aria-hidden="true"></i></a></a></td>
                             </tr>
                         @endforeach
