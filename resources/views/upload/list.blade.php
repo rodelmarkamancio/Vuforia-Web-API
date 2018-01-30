@@ -22,13 +22,13 @@
                         @foreach ($data as $key => $item)
                             <tr>
                                 <th scope="row">{{ $key + 1 }}</th>
-                                <td><a href="{{ route('getData', $item->target_id) }}">{{ $item->target_id }}</a></td>
+                                <td><a href="{{ route('admingetData', $item->target_id) }}">{{ $item->target_id }}</a></td>
                                 <td>{{ $item->name }}</a></td>
                                 <td>{{ $item->width }}</a></td>
                                 <td>{{ $item->active_flag }}</a></td>
                                 <td>{{ $item->tracking_rating }}</a></td>
                                 <td>{{ $item->reco_rating }}</a></td>
-                                <td><a href="{{ route('getDelete', $item->target_id) }}" title="delete" data-method="DELETE" class="delete-btn"><i class="fa fa-trash-o" aria-hidden="true"></i></a></a></td>
+                                <td><a href="{{ route('admingetDelete', $item->target_id) }}" title="delete" data-method="DELETE" class="delete-btn"><i class="fa fa-trash-o" aria-hidden="true"></i></a></a></td>
                             </tr>
                         @endforeach
                     </tbody>

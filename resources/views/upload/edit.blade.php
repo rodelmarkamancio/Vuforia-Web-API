@@ -28,27 +28,9 @@
                     </tbody>
                 </table>
 
-                <form id="formUpload" method="post" action="{{ route('getUpdate', $id) }}" enctype="multipart/form-data">
+                <form id="formUpload" method="post" action="{{ route('admingetUpdate', $id) }}" enctype="multipart/form-data">
 
-                    <div class="form-group">
-                        @if (count($errors))
-                        <div class="alert alert-danger">
-                            <ul>
-                                @foreach ($errors->all() as $error)
-                                    <li>{{ $error }}</li>
-                                @endforeach
-                            </ul>
-                        </div>
-                        @endif
-                    </div>
-
-                    @if (Session::has('flash_message'))
-                        <div class="alert alert-success">
-                            <span class="glyphicon glyphicon-ok"></span>
-                            <em> {!! session('flash_message') !!}</em>
-                        </div>
-                    @endif
-                    {{ csrf_field() }}
+                    @include('common.message')
 
                     <div class="form-group">
                         <div class="row">
@@ -63,11 +45,21 @@
                     <div class="form-group">
                         <div class="row">
                             <div class="col">
+                                <input type="text" name="fbx_file" class="form-control" id="fbx" value="{{ $imageTarget->fbx_file }}" placeholder="FBX File URL">
+                            </div>
+                            <div class="col">
+                                <input type="text" name="image_metadata" class="form-control" placeholder="Image Metadata">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col">
                                 <label for="image">Image</label>
                                 <input type="file" name="image" class="form-control-file" id="image">
                             </div>
                             <div class="col">
-                                <input type="text" name="image_metedata" class="form-control" placeholder="Image Metadata">
+                                {{--  <input type="text" name="image_metedata" class="form-control" placeholder="Image Metadata">  --}}
                             </div>
                         </div>
                     </div>

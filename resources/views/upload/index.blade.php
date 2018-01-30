@@ -5,27 +5,9 @@
         <div class="row">
             <div class="col-md-12">
 
-                <form id="formUpload" method="post" action="{{ route('upload') }}" enctype="multipart/form-data">
+                <form id="formUpload" method="post" action="{{ route('adminupload') }}" enctype="multipart/form-data">
 
-                    <div class="form-group">
-                        @if (count($errors))
-                        <div class="alert alert-danger">
-                            <ul>
-                                @foreach ($errors->all() as $error)
-                                    <li>{{ $error }}</li>
-                                @endforeach
-                            </ul>
-                        </div>
-                        @endif
-                    </div>
-
-                    @if (Session::has('flash_message'))
-                        <div class="alert alert-success">
-                            <span class="glyphicon glyphicon-ok"></span>
-                            <em> {!! session('flash_message') !!}</em>
-                        </div>
-                    @endif
-                    {{ csrf_field() }}
+                    @include('common.message')
 
                     <div class="form-group">
                         <div class="row">
@@ -33,7 +15,17 @@
                                 <input type="text" name="name" class="form-control" placeholder="Image name" required>
                             </div>
                             <div class="col">
-                                <input type="number" min="10" name="width" class="form-control" value="10" placeholder="Image width">
+                                <input type="number" min="10" name="width" class="form-control" value="300" placeholder="Image width">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col">
+                                <input type="text" name="fbx_file" class="form-control" id="fbx" placeholder="FBX File URL">
+                            </div>
+                            <div class="col">
+                                <input type="text" name="image_metedata" class="form-control" placeholder="Image Metadata">
                             </div>
                         </div>
                     </div>
@@ -44,9 +36,7 @@
                                 <input type="file" name="image" class="form-control-file" id="image" required>
                             </div>
                             <div class="col">
-                                <input type="text" name="image_metedata" class="form-control" placeholder="Image Metadata">
-                                {{--  <label for="image-metadata">Image Metadata</label>
-                                <input type="file" name="image_metedata" class="form-control-file" id="image-metadata">  --}}
+                                {{--  <input type="text" name="image_metedata" class="form-control" placeholder="Image Metadata">  --}}
                             </div>
                         </div>
                     </div>
