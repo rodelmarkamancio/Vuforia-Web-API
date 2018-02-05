@@ -15,7 +15,7 @@ class APIController extends Controller
     function __construct()
     {
         // $result = $vws->getTargets();
-        $this->middleware('auth');
+        // $this->middleware('auth');
         $this->config =  [
             "url" => [
                 "targets" => "https://vws.vuforia.com/targets",
