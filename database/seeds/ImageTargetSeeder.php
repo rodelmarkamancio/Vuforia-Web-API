@@ -44,7 +44,7 @@ class ImageTargetSeeder extends Seeder
             ],
             [
                 'id' => 4,
-                'generated_id' => 'd302e05fb844446585e2bd58fbdf0c7e',
+                'generated_id' => 'db5cd066212448ad8468f7fc4a5e73d3',
                 'name' => 'Brick002',
                 'width' => 300,
                 'metadata' => 'Brick002',
@@ -54,7 +54,7 @@ class ImageTargetSeeder extends Seeder
             ],
             [
                 'id' => 5,
-                'generated_id' => 'd302e05fb844446585e2bd58fbdf0c7e',
+                'generated_id' => 'e1dd579ac4924f54a036cdee5be78881',
                 'name' => 'Rock',
                 'width' => 300,
                 'metadata' => 'Rock',
